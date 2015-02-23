@@ -22,16 +22,14 @@ function noMoreClicking() {
 
 
 
-function hideRow() {
+function toggleRow(type) {
   var section = document.getElementById("grade-list");
   if(section != null) {
-    section.lastElementChild.style.display = "none";
+    section.lastElementChild.style.display = type;
   }
 }
 
-function showRow() {
-  var section = document.getElementById("grade-list");
-  if(section != null) {
-    section.lastElementChild.style.display = "block";
-  }
+function deleteRow(button) {
+  var parentDiv = button.parentNode.parentNode.parentNode;
+  parentDiv.style.display = 'none';
 }
