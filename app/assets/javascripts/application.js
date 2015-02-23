@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require d3
 //= require_tree .
+
+function noMoreClicking() {
+  var button = document.getElementById("update-button");
+  setTimeout(function() {button.disabled = true}, 1);
+}
+
+
+
+function hideRow() {
+  var section = document.getElementById("grade-list");
+  if(section != null) {
+    section.lastElementChild.style.display = "none";
+  }
+}
+
+function showRow() {
+  var section = document.getElementById("grade-list");
+  if(section != null) {
+    section.lastElementChild.style.display = "block";
+  }
+}
